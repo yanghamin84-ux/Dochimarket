@@ -1,147 +1,138 @@
-
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>도치마켓</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>도치마켓</title>
 
-  <style>
-    * {
-      box-sizing: border-box;
-    }
+<style>
+* {
+  box-sizing: border-box;
+}
 
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #0b0b0f;
-      color: white;
-    }
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #0b0b10;
+  color: white;
+}
 
-    header {
-      padding: 25px;
-      text-align: center;
-      background: #111118;
-      border-bottom: 1px solid #29293a;
-    }
+header {
+  text-align: center;
+  padding: 55px 20px;
+  background: #15121f;
+}
 
-    header h1 {
-      margin: 0;
-      color: #a970ff;
-      font-size: 30px;
-    }
+header h1 {
+  font-size: 42px;
+  margin: 0 0 10px;
+  color: #a970ff;
+}
 
-    header p {
-      color: #aaa;
-    }
+header p {
+  color: #aaa;
+  font-size: 16px;
+}
 
-    .container {
-      max-width: 1000px;
-      margin: auto;
-      padding: 30px 20px;
-    }
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 45px 20px;
+}
 
-    .products {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
-    }
+.section-title {
+  font-size: 28px;
+  margin-bottom: 25px;
+}
 
-    .product {
-      background: #15151e;
-      border: 1px solid #29293a;
-      border-radius: 15px;
-      padding: 20px;
-    }
+.product {
+  background: #171720;
+  border: 1px solid #302d3d;
+  border-radius: 20px;
+  padding: 35px;
+  text-align: center;
+  max-width: 500px;
+  margin: auto;
+}
 
-    .product h2 {
-      margin-top: 0;
-    }
+.product-icon {
+  font-size: 70px;
+  margin-bottom: 15px;
+}
 
-    .price {
-      color: #a970ff;
-      font-size: 22px;
-      font-weight: bold;
-    }
+.product h2 {
+  font-size: 30px;
+  margin: 10px 0;
+}
 
-    .stock {
-      color: #aaa;
-      margin: 10px 0 15px;
-    }
+.price {
+  font-size: 25px;
+  font-weight: bold;
+  color: #a970ff;
+  margin: 15px 0;
+}
 
-    button {
-      width: 100%;
-      padding: 12px;
-      border: 0;
-      border-radius: 10px;
-      background: #8b4dff;
-      color: white;
-      font-size: 16px;
-      font-weight: bold;
-      cursor: pointer;
-    }
+.stock {
+  color: #ff6b6b;
+  font-size: 18px;
+  margin-bottom: 25px;
+}
 
-    button:hover {
-      background: #7134df;
-    }
+button {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 12px;
+  background: #555;
+  color: #aaa;
+  font-size: 18px;
+  font-weight: bold;
+}
 
-    footer {
-      text-align: center;
-      padding: 30px;
-      color: #777;
-    }
-  </style>
+footer {
+  text-align: center;
+  padding: 35px;
+  color: #666;
+}
+</style>
 </head>
 
 <body>
 
-  <header>
-    <h1>도치마켓</h1>
-    <p>빠르고 편리한 온라인 자판기</p>
-  </header>
+<header>
+  <h1>도치마켓</h1>
+  <p>빠르고 편리한 온라인 자판기</p>
+</header>
 
-  <div class="container">
-    <h2>🛒 상품</h2>
+<div class="container">
 
-    <div class="products">
+  <div class="section-title">🛒 상품</div>
 
-      <div class="product">
-        <h2>상품 1</h2>
-        <p class="price">1,000원</p>
-        <p class="stock">📦 재고 10개</p>
-        <button onclick="buy('상품 1')">구매하기</button>
-      </div>
+  <div class="product">
 
-      <div class="product">
-        <h2>상품 2</h2>
-        <p class="price">2,000원</p>
-        <p class="stock">📦 재고 5개</p>
-        <button onclick="buy('상품 2')">구매하기</button>
-      </div>
+    <div class="product-icon">🥚</div>
 
-      <div class="product">
-        <h2>상품 3</h2>
-        <p class="price">3,000원</p>
-        <p class="stock">📦 재고 3개</p>
-        <button onclick="buy('상품 3')">구매하기</button>
-      </div>
+    <h2>크리스탈 에그</h2>
 
+    <div class="price">
+      가격 준비중
     </div>
+
+    <div class="stock">
+      📦 품절
+    </div>
+
+    <button disabled>
+      품절
+    </button>
+
   </div>
 
-  <footer>
-    © 2026 도치마켓
-  </footer>
+</div>
 
-  <script>
-    function buy(product) {
-      alert(product + " 구매 기능은 결제 시스템 연결 후 사용할 수 있습니다.");
-    }
-  </script>
+<footer>
+  © 2026 도치마켓
+</footer>
 
 </body>
 </html>
-<h2>크리스탈 에그</h2>
-<p class="price">가격 미정</p>
-<p class="stock">📦 품절</p>
-<button disabled>품절</button>
