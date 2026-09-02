@@ -136,20 +136,16 @@ footer {
 
 </body>
 </html>
-<div class="product">
-  <div class="product-icon">🥚</div>
+<button onclick="buyProduct()">
+  구매하기
+</button>
 
-  <h2>크리스탈 에그</h2>
-
-  <div class="price">
-    1개 1,920원
-  </div>
-
-  <div class="stock">
-    📦 재고 10개
-  </div>
-
-  <button>
-    구매하기
-  </button>
-</div>
+<script>
+function buyProduct() {
+  alert(
+    "크리스탈 에그 100개\n\n" +
+    "가격: 1,920원\n\n" +
+    "구매를 원하시면 판매자가 안내한 결제 방법으로 결제해 주세요."
+  );
+}
+</script>
