@@ -164,3 +164,228 @@ function buyProduct() {
   );
 }
 </script>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>도치마켓</title>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #0b0b10;
+  color: white;
+}
+
+header {
+  text-align: center;
+  padding: 55px 20px;
+  background: #15121f;
+}
+
+header h1 {
+  font-size: 42px;
+  margin: 0;
+  color: #a970ff;
+}
+
+header p {
+  color: #aaa;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 45px 20px;
+}
+
+.product {
+  background: #171720;
+  border: 1px solid #302d3d;
+  border-radius: 20px;
+  padding: 35px;
+  text-align: center;
+  max-width: 500px;
+  margin: auto;
+}
+
+.product-icon {
+  font-size: 75px;
+}
+
+.product h2 {
+  font-size: 30px;
+}
+
+.price {
+  font-size: 25px;
+  font-weight: bold;
+  color: #a970ff;
+  margin: 15px;
+}
+
+.stock {
+  margin: 15px;
+  color: #7ee787;
+}
+
+button {
+  width: 100%;
+  padding: 15px;
+  border: 0;
+  border-radius: 12px;
+  background: #8b4dff;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #7134df;
+}
+
+/* 결제창 */
+
+#paymentBox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.75);
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.payment {
+  width: 100%;
+  max-width: 450px;
+  background: #171720;
+  border: 1px solid #302d3d;
+  border-radius: 20px;
+  padding: 30px;
+  text-align: center;
+}
+
+.payment h2 {
+  color: #a970ff;
+}
+
+.account {
+  background: #22222d;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 20px 0;
+  line-height: 1.8;
+}
+
+.close {
+  background: #444;
+  margin-top: 10px;
+}
+
+footer {
+  text-align: center;
+  padding: 35px;
+  color: #666;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>도치마켓</h1>
+  <p>빠르고 편리한 온라인 자판기</p>
+</header>
+
+<div class="container">
+
+  <div class="product">
+
+    <div class="product-icon">🥚</div>
+
+    <h2>크리스탈 에그</h2>
+
+    <div class="price">
+      1개 1,920원
+    </div>
+
+    <div class="stock">
+      📦 재고 10개
+    </div>
+
+    <button onclick="openPayment()">
+      🛒 구매하기
+    </button>
+
+  </div>
+
+</div>
+
+<footer>
+  © 2026 도치마켓
+</footer>
+
+
+<!-- 결제 안내창 -->
+
+<div id="paymentBox">
+
+  <div class="payment">
+
+    <h2>💳 결제하기</h2>
+
+    <h3>🥚 크리스탈 에그</h3>
+
+    <div class="price">
+      1,920원
+    </div>
+
+    <div class="account">
+      💰 결제 방법<br><br>
+      판매자가 안내한 결제 방법으로<br>
+      1,920원을 결제해 주세요.
+    </div>
+
+    <button onclick="completePayment()">
+      ✅ 결제 완료
+    </button>
+
+    <button class="close" onclick="closePayment()">
+      닫기
+    </button>
+
+  </div>
+
+</div>
+
+
+<script>
+
+function openPayment() {
+  document.getElementById("paymentBox").style.display = "flex";
+}
+
+function closePayment() {
+  document.getElementById("paymentBox").style.display = "none";
+}
+
+function completePayment() {
+  alert(
+    "✅ 결제 완료 요청이 접수되었습니다.\n\n" +
+    "판매자의 입금 확인 후 상품이 지급됩니다."
+  );
+}
+
+</script>
+
+</body>
+</html>
